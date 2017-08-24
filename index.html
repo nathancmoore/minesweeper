@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>MINESWEEPER</title>
+  </head>
+  <body>
+    <form id="form" action="index.html" method="post">
+      <table>
+        <tr>
+          <td><label for="rows">ROWS: </label></td>
+          <td><input id="rowsInput" type="number" name="rows" class="field" placeholder="# of rows" required /></td>
+        </tr>
+        <tr>
+          <td><label for="cols">COLUMNS: </label></td>
+          <td><input id="colsInput" type="number" name="cols" class="field" placeholder="# of columns" required /></td>
+        </tr>
+        <tr>
+          <td><label for="mines" type="number">MINES: </label></td>
+          <td><input id="minesInput" type="number" name="mines" class="field" placeholder="# of mines" required></input></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td style="text-align: right;" id='remove'><input type="submit" value="Play Minesweeper!" id="submit" /></td>
+        </tr>
+      </table>
+    </form>
+    <table id="display">
+    </table>
+  </body>
+  <script type="text/javascript" src="app.js"></script>
+</html>
