@@ -175,7 +175,7 @@ function startGame() {
   rows = rows += parseInt(event.target.rowsInput.value);
   cols = cols += parseInt(event.target.colsInput.value);
   mines = mines += parseInt(event.target.minesInput.value);
-  if(rows < 1 || cols < 1 || mines < 1 || (rows * cols < mines)) {
+  if(rows < 3 || cols < 3 || mines < 1 || (rows * cols < mines || rows > 10 || cols > 10)) {
     alert('INVALID!');
     location.reload();
   } else {
