@@ -91,7 +91,7 @@ function assignAdj() {
     checkNeighbor(cells[i], cells[i + cols + 1]);
   }
   //bottom edge
-  for (var i = (cols * rows - cols + 1); i < (cols * rows); i++) {
+  for (var i = (cols * rows - cols + 2); i < (cols * rows); i++) {
     checkNeighbor(cells[i], cells[i - 1]);
     checkNeighbor(cells[i], cells[i - cols - 1]);
     checkNeighbor(cells[i], cells[i - cols]);
@@ -159,7 +159,7 @@ function handleClick(event) {
     lose();
   }
   else {
-    event.target.setAttribute('src', 'img/' + cells[event.target.id].adjacentMines + '.svg');
+    event.target.setAttribute('src', 'img/' + cells[parseInt(event.target.id)].adjacentMines + '.svg');
     explored ++;
     if (explored + mines === rows * cols) {
       win();
