@@ -134,14 +134,14 @@ function createMinefield() {
   assignAdj();
 }
 
-function offerNewGame() {
-  var newGame = document.getElementById('reset');
-  var button = document.createElement('input');
-  button.setAttribute('type', 'submit');
-  button.setAttribute('value', 'Play Again!');
-  newGame.appendChild(button);
-  newGame.addEventListener('submit', location.reload);
-}
+// function offerNewGame() {
+//   var newGame = document.getElementById('reset');
+//   var button = document.createElement('input');
+//   button.setAttribute('type', 'submit');
+//   button.setAttribute('value', 'Play Again!');
+//   newGame.appendChild(button);
+//   newGame.addEventListener('submit', window.reload);
+// }
 
 function win() {
   for (var i = 0; i < mines; i++) {
@@ -152,7 +152,7 @@ function win() {
     var necrophagist = document.getElementById(i);
     necrophagist.removeEventListener('click', handleClick);
   }
-  offerNewGame();
+  // offerNewGame();
 }
 
 function lose() {
@@ -162,7 +162,7 @@ function lose() {
     var necrophagist = document.getElementById(i);
     necrophagist.removeEventListener('click', handleClick);
   }
-  offerNewGame();
+  // offerNewGame();
 }
 
 function handleClick(event) {
